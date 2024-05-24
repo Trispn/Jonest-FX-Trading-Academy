@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+   /* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 1rem;
+}
+
+#tutorials {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.tutorial {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+}
+
+.tutorial h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.tutorial video {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.tutorial button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+}
+
+.tutorial button:hover {
+    background-color: #0056b3;
+}
+
+.tutorial .locked {
+    background-color: #e9ecef;
+}
+
+.tutorial .unlocked {
+    background-color: #ffffff;
+}
+
+#paypal-button-container-tutorial5,
+#paypal-button-container-tutorial6,
+#paypal-button-container-tutorial7,
+#paypal-button-container-tutorial8,
+#paypal-button-container-tutorial9,
+#paypal-button-container-tutorial10,
+#paypal-button-container-tutorial11,
+#paypal-button-container-tutorial12,
+#paypal-button-container-tutorial13,
+#paypal-button-container-tutorial14,
+#paypal-button-container-tutorial15,
+#paypal-button-container-tutorial16,
+#paypal-button-container-tutorial17,
+#paypal-button-container-tutorial18,
+#paypal-button-container-tutorial19,
+#paypal-button-container-tutorial20 {
+    margin-top: 1rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding: 0.5rem;
+    }
+
+    #tutorials {
+        grid-template-columns: 1fr;
+    }
+
+    .tutorial h2 {
+        font-size: 1rem;
+    }
+
+    .tutorial button {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+    }
+}     
+        
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Tutorials</h1>
+    </header>
+    <main>
+        <section id="tutorials">
+            <!-- Unlocked tutorials -->
+            <div class="tutorial unlocked">
+                <h2>Tutorial 1 (Unlocked)</h2>
+                <video controls src="video1.mp4"></video>
+            </div>
+            <div class="tutorial unlocked">
+                <h2>Tutorial 2 (Unlocked)</h2>
+                <video controls src="video2.mp4"></video>
+            </div>
+            <div class="tutorial unlocked">
+                <h2>Tutorial 3 (Unlocked)</h2>
+                <video controls src="video3.mp4"></video>
+            </div>
+            <div class="tutorial unlocked">
+                <h2>Tutorial 4 (Unlocked)</h2>
+                <video controls src="video4.mp4"></video>
+            </div>
+            <!-- Locked tutorials -->
+            <div class="tutorial locked" id="tutorial5">
+                <h2>Tutorial 5 (Locked)</h2>
+                <div id="paypal-button-container-tutorial5"></div>
+                <button id="bankAccountButton5" data-tutorial="tutorial5">Pay with Bank Account</button>
+                <button id="mobileMoneyButton5" data-tutorial="tutorial5">Pay with Mobile Money</button>
+            </div>
+            <div class="tutorial locked" id="tutorial6">
+                <h2>Tutorial 6 (Locked)</h2>
+                <div id="paypal-button-container-tutorial6"></div>
+                <button id="bankAccountButton6" data-tutorial="tutorial6">Pay with Bank Account</button>
+                <button id="mobileMoneyButton6" data-tutorial="tutorial6">Pay with Mobile Money</button>
+            </div>
+            <div class="tutorial locked" id="tutorial7">
+                <h2>Tutorial 7 (Locked)</h2>
+                <div id="paypal-button-container-tutorial7"></div>
+                <button id="bankAccountButton7" data-tutorial="tutorial7">Pay with Bank Account</button>
+                <button id="mobileMoneyButton7" data-tutorial="tutorial7">Pay with Mobile Money</button>
+            </div>
+            <div class="tutorial locked" id="tutorial8">
+                <h2>Tutorial 8 (Locked)</h2>
+                <div id="paypal-button-container-tutorial8"></div>
+                <button id="bankAccountButton8" data-tutorial="tutorial8">Pay with Bank Account</button>
+                <button id="mobileMoneyButton8" data-tutorial="tutorial8">Pay with Mobile Money</button>
+            </div>
+            <div class="tutorial locked" id="tutorial9">
+                <h2>Tutorial 9 (Locked)</h2>
+                <div id="paypal-button-container-tutorial9"></div>
+                <button id="bankAccountButton9" data-tutorial="tutorial9">Pay with Bank Account</button>
+                <button id="mobileMoneyButton9" data-tutorial="tutorial9">Pay with Mobile Money</button>
+            </div>
+            <div class="tutorial locked" id="tutorial10">
+                <h2>Tutorial 10 (Locked)</h2>
+                <div id="paypal-button-container-tutorial10"></div>
+                <button id="bankAccountButton10" data-tutorial="tutorial10">Pay with Bank Account</button>
+                <button id="mobileMoneyButton10" data-tutorial="tutorial10">Pay with Mobile Money</button>
+            </div>
+            <div class="tutorial locked" id="tutorial11">
+                <h2>Tutorial 11 (Locked)</h2>
+                <div id="paypal-button-container-tutorial11"></div>
+                <button id="bankAccountButton11" data-tutorial="tutorial11">Pay with Bank Account</button>
+                <button id="mobileMoneyButton11" data-tutorial="tutorial11">Pay with Mobile Money</button>
+            </div>
+            <div class="tutorial locked" id="tutorial12">
+                <h2>Tutorial 12 (Locked)</h2>
+                <div id="paypal-button-container-tutorial12"></div>
+                <button id="bankAccountButton12" data-tutorial="tutorial12">Pay with Bank Account</button>
+                <button id="mobileMoneyButton12" data-tutorial="tutorial12">Pay with Mobile Money</button>
+            </div>
+            <div class="tutorial locked" id="tutorial13">
+                <h2>Tutorial 13 (Locked)</h2>
+                <div id="paypal-button-container-tutorial13"></div>
+                <button id="bankAccountButton13" data-tutorial="tutorial13">Pay with Bank Account</button>
+                <button id="mobileMoneyButton13" data-tutorial="tutorial13">Pay with Mobile Money</button>
+            </div>
+            <div class="tutorial locked" id="tutorial14">
+                <h2>Tutorial 14 (Locked)</h2>
+                <div id="paypal-button-container-tutorial14"></div>
+                <button id="bankAccountButton14" data-tutorial="tutorial14">Pay with Bank Account</button>
+                <button id="mobileMoneyButton14" data-tutorial="tutorial14">Pay with Mobile Money</button>
+            </div>
+            <div class="tutorial locked" id="tutorial15">
+                <h2>Tutorial 15 (Locked)</h2>
+                <div id="paypal-button-container-tutorial15"></div>
+                <button id="bankAccountButton15" data-tutorial="tutorial15">Pay with Bank Account</button>
+                <button id="mobileMoneyButton15" data-tutorial="tutorial15">Pay with Mobile Money</button>
+            </div>
+            <div class="tutorial locked" id="tutorial16">
+                <h2>Tutorial 16 (Locked)</h2>
+                <div id="paypal-button-container-tutorial16"></div>
+                <button id="bankAccountButton16" data-tutorial="tutorial16">Pay with Bank Account</button>
+                <button id="mobileMoneyButton16" data-tutorial="tutorial16">Pay with Mobile Money</button>
+            </div>
+            <div class="tutorial locked" id="tutorial17">
+                <h2>Tutorial 17 (Locked)</h2>
+                <div id="paypal-button-container-tutorial17"></div>
+                <button id="bankAccountButton17" data-tutorial="tutorial17">Pay with Bank Account</button>
+                <button id="mobileMoneyButton17" data-tutorial="tutorial17">Pay with Mobile Money</button>
+            </div>
+            <div class="tutorial locked" id="tutorial18">
+                <h2>Tutorial 18 (Locked)</h2>
+                <div id="paypal-button-container-tutorial18"></div>
+                <button id="bankAccountButton18" data-tutorial="tutorial18">Pay with Bank Account</button>
+                <button id="mobileMoneyButton18" data-tutorial="tutorial18">Pay with Mobile Money</button>
+            </div>
+            <div class="tutorial locked" id="tutorial19">
+                <h2>Tutorial 19 (Locked)</h2>
+                <div id="paypal-button-container-tutorial19"></div>
+                <button id="bankAccountButton19" data-tutorial="tutorial19">Pay with Bank Account</button>
+                <button id="mobileMoneyButton19" data-tutorial="tutorial19">Pay with Mobile Money</button>
+            </div>
+            <div class="tutorial locked" id="tutorial20">
+                <h2>Tutorial 20 (Locked)</h2>
+                <div id="paypal-button-container-tutorial20"></div>
+                <button id="bankAccountButton20" data-tutorial="tutorial20">Pay with Bank Account</button>
+                <button id="mobileMoneyButton20" data-tutorial="tutorial20">Pay with Mobile Money</button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js" defer>
+        
+     // Simulate premium content unlock (mock function)
+function unlockPremiumContent(tutorialId) {
+    console.log(`Unlocking premium content for ${tutorialId}...`);
+    const section = document.getElementById(tutorialId);
+    if (section) {
+        section.classList.remove('locked');
+        section.classList.add('unlocked');
+        section.innerHTML = `
+            <h2>${section.querySelector('h2').textContent.replace(' (Locked)', ' (Unlocked)')}</h2>
+            <video controls src="video_placeholder.mp4"></video>
+            <a href="file.pdf" download>Download PDF</a>
+            <a href="file.mp3" download>Download Audio</a>
+        `;
+    }
+}
+
+// Mock function to simulate payment processing and unlocking content
+function processPayment(tutorialId, paymentType) {
+    console.log(`Processing ${paymentType} payment for ${tutorialId}...`);
+    setTimeout(() => {
+        console.log(`${paymentType} payment successful!`);
+        unlockPremiumContent(tutorialId);
+    }, 2000);
+}
+
+// Event listener for bank account payment
+const bankAccountButtons = document.querySelectorAll('[id^=bankAccountButton]');
+bankAccountButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        const tutorialId = event.target.getAttribute('data-tutorial');
+        alert(`Please transfer to the bank account number: 1001101275390`);
+        processPayment(tutorialId, 'Bank account');
+    });
+});
+
+// Event listener for mobile money payment
+const mobileMoneyButtons = document.querySelectorAll('[id^=mobileMoneyButton]');
+mobileMoneyButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        const tutorialId = event.target.getAttribute('data-tutorial');
+        alert(`Please send mobile money to: +256 772 470700`);
+        processPayment(tutorialId, 'Mobile money');
+    });
+});
+
+// PayPal integration for tutorial 5
+paypal.Buttons({
+    createOrder: function(data, actions) {
+        console.log('Creating PayPal order for tutorial 5...');
+        return actions.order.create({
+            purchase_units: [{
+                amount: {
+                    value: '10.00' // Replace with your actual price
+                }
+            }]
+        });
+    },
+    onApprove: function(data, actions) {
+        console.log('Approving PayPal payment for tutorial 5...');
+        return actions.order.capture().then(function(details) {
+            console.log('PayPal payment successful for tutorial 5!');
+            unlockPremiumContent('tutorial5');
+        });
+    }
+}).render('#paypal-button-container-tutorial5');
+
+// PayPal integration for tutorial 6
+paypal.Buttons({
+    createOrder: function(data, actions) {
+        console.log('Creating PayPal order for tutorial 6...');
+        return actions.order.create({
+            purchase_units: [{
+                amount: {
+                    value: '10.00' // Replace with your actual price
+                }
+            }]
+        });
+    },
+    onApprove: function(data, actions) {
+        console.log('Approving PayPal payment for tutorial 6...');
+        return actions.order.capture().then(function(details) {
+            console.log('PayPal payment successful for tutorial 6!');
+            unlockPremiumContent('tutorial6');
+        });
+    }
+}).render('#paypal-button-container-tutorial6');
+
+// Add similar PayPal integrations for tutorials 7 to 20...   
+        
+        
+        
+    </script>
+</body>
+</html>

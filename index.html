@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonest FX Trading Academy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+      
+      body {
+      background-color: #E9F1FA;
+      background-image: linear-gradient(to bottom, #E9F1FA, white);
+      color: #003049;
+      font-family: Arial, sans-serif;
+    }
+    h1, h2 {
+      color: #003049;
+    }
+    h1 {
+      color: #005A9C;
+    }
+    a {
+      color: #00ABE4;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .header-image {
+      width: 100%;
+      max-width:auto;
+      margin-bottom: 20px;
+    }
+
+.course {
+  background-color: #E9F1FA;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.course h2 {
+  color: #003049;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.course p {
+  color: #666;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.course img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px; /* Adjust margin as needed */
+}
+nav {
+            padding: 10px 20px;
+            text-align: left;
+            box-shadow: 0 2px 4px rgba(80, 0, 0, 0.1);
+            position: relative;
+        }
+
+        nav .menu-icon {
+            font-size: 24px;
+            color: #003070;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #6f98be;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            width: 200px;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px 20px;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #f5f5f5;
+        }
+
+        nav.active ul {
+            display: block;
+        }
+
+.image-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.image-section img {
+    max-width: 30%; /* Adjust the width of images as needed */
+}
+
+/* Media queries for different screen sizes */
+@media screen and (max-width: 768px) {
+    .image-section {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-section img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+.portfolio-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.portfolio-section h2 {
+    color: #003049;
+    margin-bottom: 30px;
+}
+
+.portfolio-item {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    vertical-align: top;
+    background-color: #E9F1FA;
+    padding: 20px;
+  
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.portfolio-item p {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio-item {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .portfolio-item {
+        width: 100%;
+    }
+}
+
+
+.scrollable-images {
+            width: 300px;
+            height: 400px; 
+            /* Adjust as needed */
+            overflow-x: scroll; /* Horizontal scrolling */
+            white-space: nowrap; /* Prevent line breaks for images */
+            margin-right: 2rem;
+            border-radius: 10px;
+        }
+
+        .scrollable-images img {
+            width: 100%;
+            height: auto;
+            display: inline-block; /* Display images in a row */
+            margin-right: 5rem;
+            border-radius: 10px;
+        }
+
+.video-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+  object-fit:cover;
+}
+
+.video-container {
+  width: 320px;
+  height: 320px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+</style>
+</head>
+<body>
+  <header>
+    <img src="h.png" alt="The name use Jonest FX Trading Academy logo" class="header-image">
+    <center><h1>Jonest FX Trading Academy</h1></center>
+  </header>
+  
+  <nav>
+    <span class="menu-icon"><i class="fas fa-bars"></i></span>
+    <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="courses.html"><i class="fas fa-book"></i> Tutorials page</a></li>
+        <li><a href="about.html"><i class="fas fa-info"></i> About us</a></li>
+
+        <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+    </ul>
+</nav>
+  
+  
+  <main>
+    <h4><center>join the Jonest  team to acquire teller machine for passive or lifetime income</center></h4>
+    <p>Read the <a href="/announcement.html">Announcement</a></p>
+    <center><h2>Welcome to Jonest FX Trading Academy</h2></center>
+    
+    <p>Start your journey with our comprehensive beginner course. Learn the basics of Forex trading, terminology, and how to get started in the market.</p>
+    <a href="courses.html" class="cta-button">GET STARTED</a>
+    
+    
+    
+   <div class="scrollable-images">
+                <img src="h.png" alt="Image 1">
+                <img src="m.png" alt="Image 1">
+                <img src="t.png" alt="Image 1">
+                <img src="h.png" alt="Image 2">
+                <img src="l.png" alt="Image 1">
+                <img src="h.png" alt="Image 2">
+                <img src="x.png" alt="Image 3">
+                <img src="t.png" alt="Image 1">
+                <img src="h.png" alt="Image 1">
+                <img src="m.png" alt="Image 2">
+                <img src="x.png" alt="Image 1">
+                <img src="t.png" alt="Image 2">
+                <img src="t.png" alt="Image 3">
+                <img src="x.png" alt="Image 1">
+                <img src="n.png" alt="Image 1">
+                
+            </div>
+            
+        </div> 
+      
+   
+    
+    
+    <h2>Why Choose Jonest FX Academy ?</h2>
+    <ul>
+      <li>Choosing Jonest FX Trading Academy is the smartest investment you can make in your trading career.</li>
+      <li>Our academy is dedicated to providing comprehensive and accessible Forex education tailored for traders at all levels—from beginners to seasoned professionals.</li>
+      <li>With a curriculum designed by experienced traders and educators, we cover everything from foundational concepts to advanced trading strategies, ensuring you have the knowledge and skills to succeed in the dynamic Forex market.</li>
+      <li>Our hands-on approach, interactive learning modules, and real-world trading simulations equip you with practical experience and confidence.</li>
+      <li>Additionally, our supportive community and expert mentors are always available to guide you through your trading journey, offering personalized feedback and continuous support.</li>
+      <li>At Jonest FX Trading Academy, we are not just focused on teaching you to trade; we are committed to helping you thrive and achieve financial independence through intelligent trading.</li>
+      <li>Join us today and transform your trading potential into consistent success.</li>
+    </ul>
+</div>
+<center><h1>FX Trading Knowledge </h1></center>
+<section class="image-section">
+    
+    <div>
+        <img src="l.png" alt="Risk Management">
+        <p>Understanding and implementing effective risk management strategies is crucial for long-term success in Forex trading. Learn to use tools like stop-loss orders, position sizing, and leverage control to protect your capital and minimize losses.</p>    <a href="courses.html" class="cta-button">GET STARTED</a>
+    </div>
+    <div>
+        <img src="t.png" alt="Devices for Trading">
+        
+        <div class="video-container">
+        <video src="m.mp4" autoplay muted loop></video>
+    </div>
+
+         <p>Access the Forex market from anywhere using various devices. Whether you're using a desktop computer, laptop, tablet, or smartphone, ensure you have the right tools and platforms to analyze the market and execute trades efficiently.</p>
+    </div>
+    <div>
+        <img src="x.png" alt="Trading Platform">
+         <p>Familiarize yourself with the trading platforms available. These platforms offer a range of features and tools to help you analyze market data, execute trades, and manage your portfolio effectively. Choose a platform that suits your trading style and needs.</p>
+    </div>
+</section>
+
+    
+      <h2>Intermediate Strategies</h2>
+      <p>Build on your knowledge with intermediate strategies. This course covers technical analysis, risk management, and trading psychology.</p>
+    </div>
+    <div class="course">
+     <center> <h2>Advanced Trading Techniques</h2></center>
+      <p>Master advanced trading techniques including algorithmic trading, advanced indicators, and high-frequency trading.</p>
+      <img src="m.png" alt="">
+      
+      
+      
+      
+      
+      
+    <h2>Live Trading Sessions</h2>
+    <p>Join our live trading sessions led by experienced traders. Gain practical insights, observe real-time market analysis, and interact with instructors as they navigate live trading scenarios. These sessions provide invaluable hands-on experience and opportunities to refine your trading skills in a dynamic environment.</p>    <a href="courses.html" class="cta-button">GET STARTED</a>
+</div>
+
+
+
+<section class="portfolio-section">
+    <h2>Our Portfolio</h2>
+    <div class="portfolio-item">
+        <img src="g.png" alt="Comprehensive Course Materials">
+        <p><strong>Comprehensive Course Materials</strong><br>
+           Our curriculum covers everything from basic Forex concepts to advanced trading strategies, providing students with all the knowledge they need to succeed in the market.</p>
+    </div>
+    <div class="portfolio-item">
+        <img src="z.png" alt="Live Webinars and Workshops">
+        <p><strong>Live Webinars and Workshops</strong><br>
+           Engage with our expert traders through live webinars and interactive workshops, gaining real-time insights and practical trading skills.</p>
+               <a href="courses.html" class="cta-button">GET STARTED</a>
+    </div>
+    <div class="portfolio-item">
+        <img src="k.png" alt="Dedicated Student Support">
+        <p><strong>Dedicated Student Support</strong><br>
+           Our support team and mentors are available to assist you at every step of your trading journey, ensuring you have the guidance needed to achieve your goals.</p>
+               <a href="courses.html" class="cta-button">GET STARTED</a>
+    </div>
+</section>
+
+    </div>
+  </main>
+  <footer>
+      <p>&copy; 2024 Eddie Beauty Cosmetics. All rights reserved.</p>
+    <p><a href="https://wa.me/256742171021?text=Hello%20from%20Eddie%20Beauty%20Cosmetics">web developer</a> | <a href="about.html">About Us</a> | <a href="faq.html">FAQ</a> | <a href="contact.html">Contact Us</a></p>
+  </footer>
+  
+  <script>
+      
+      // Toggle the navigation menu
+    const menuIcon = document.querySelector('.menu-icon');
+    const nav = document.querySelector('nav');
+
+    menuIcon.addEventListener('click', function() {
+        nav.classList.toggle('active');
+    });
+    
+    
+    
+    document.addEventListener("DOMContentLoaded", function() {
+    const scrollContainer = document.querySelector(".scrollable-images");
+    let autoScrollInterval;
+    let autoScrollTimeout;
+    let scrollDirection = 'right';
+
+    function startAutoScroll() {
+        autoScrollInterval = setInterval(() => {
+            if (scrollDirection === 'right') {
+                scrollContainer.scrollLeft += 1;
+                if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+                    clearInterval(autoScrollInterval);
+                    setTimeout(() => {
+                        scrollDirection = 'left';
+                        startAutoScroll();
+                    }, 2000); // Pause for 2 seconds before scrolling left
+                }
+            } else {
+                scrollContainer.scrollLeft -= 1;
+                if (scrollContainer.scrollLeft <= 0) {
+                    clearInterval(autoScrollInterval);
+                    setTimeout(() => {
+                        scrollDirection = 'right';
+                        startAutoScroll();
+                    }, 2000); // Pause for 2 seconds before scrolling right
+                }
+            }
+        }, 20); // Adjust the speed by changing the interval value
+    }
+
+    function stopAutoScroll() {
+        clearInterval(autoScrollInterval);
+        clearTimeout(autoScrollTimeout);
+    }
+
+    function resumeAutoScroll() {
+        autoScrollTimeout = setTimeout(() => {
+            startAutoScroll();
+        }, 30); // Resume auto-scroll after 0.3 seconds of inactivity
+    }
+
+    scrollContainer.addEventListener('mouseenter', () => stopAutoScroll());
+    scrollContainer.addEventListener('mouseleave', () => startAutoScroll());
+
+    scrollContainer.addEventListener('scroll', () => {
+        stopAutoScroll();
+        resumeAutoScroll();
+    });
+
+    startAutoScroll();
+});
+
+    
+    
+    
+</script>
+  
+  
+  
+  
+  
+</body>
+</html>

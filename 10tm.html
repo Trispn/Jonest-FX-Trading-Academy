@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Trading Mistakes</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>/* styles.css */
+
+body {
+  background-color: #E9F1FA;
+  background-image: linear-gradient(to bottom, #E9F1FA, white);
+  color: #003049;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #E9F1FA;
+    color: #003049;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: #003049 3px solid;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+main {
+    padding: 20px;
+    background: #E9F1FA;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+section.mistake {
+    margin-bottom: 20px;
+}
+
+section.mistake h2 {
+    color: #003049;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+section.mistake p {
+    line-height: 1.6;
+}
+
+footer {
+    background: #E9F1FA;
+    color:#003049;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+#scrollToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #003049; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Top 10 Trading Mistakes</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <article id="trading-mistakes">
+            <!-- JavaScript will dynamically insert sections here -->
+        </article>
+    </main>
+
+    <button id="scrollToTopBtn" title="Go to top">Top</button>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Trading Insights Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    const mistakes = [
+        {
+            title: "1. Lack of a Trading Plan",
+            content: "Trading without a plan is like driving without a destination. A well-structured trading plan is essential for consistent success."
+        },
+        {
+            title: "2. Overtrading",
+            content: "Trading too frequently can lead to unnecessary losses and high transaction costs. It's important to be selective with your trades."
+        },
+        {
+            title: "3. Not Using Stop Losses",
+            content: "A stop loss is crucial for protecting your capital. Failing to use stop losses can result in significant losses."
+        },
+        {
+            title: "4. Ignoring Market Trends",
+            content: "Trading against the market trend is risky. Always be aware of the broader market context."
+        },
+        {
+            title: "5. Letting Emotions Rule",
+            content: "Emotional trading often leads to poor decisions. Maintain a disciplined approach to avoid letting emotions interfere."
+        },
+        {
+            title: "6. Not Diversifying",
+            content: "Concentrating your investments in one area can increase risk. Diversify your portfolio to spread risk."
+        },
+        {
+            title: "7. Chasing Losses",
+            content: "Trying to recover losses by making riskier trades can be detrimental. Stick to your strategy even after a loss."
+        },
+        {
+            title: "8. Lack of Research",
+            content: "Failing to do proper research can lead to uninformed decisions. Always perform due diligence before trading."
+        },
+        {
+            title: "9. Overleveraging",
+            content: "Using too much leverage can amplify losses. Be cautious with leverage and use it judiciously."
+        },
+        {
+            title: "10. Ignoring Risk Management",
+            content: "Effective risk management is key to long-term success. Always manage your risk appropriately."
+        }
+    ];
+
+    const article = document.getElementById('trading-mistakes');
+
+    mistakes.forEach(mistake => {
+        const section = document.createElement('section');
+        section.className = 'mistake';
+        
+        const h2 = document.createElement('h2');
+        h2.textContent = mistake.title;
+        
+        const p = document.createElement('p');
+        p.textContent = mistake.content;
+        
+        section.appendChild(h2);
+        section.appendChild(p);
+        
+        article.appendChild(section);
+    });
+
+    // Scroll to top button functionality
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    scrollToTopBtn.addEventListener("click", function() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+});</script>
+</body>
+</html>
